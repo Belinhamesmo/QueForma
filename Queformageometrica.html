@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta> <title> Tomada de Decisão </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- framework do formulário: Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    </head>
+
+<style> 
+    div {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5%;
+}
+
+canvas {
+     border: 2px solid #FDFD00;
+     background-color: #fdfd002a;
+     margin-right:80%
+}
+form {
+    margin-left: 20%;
+    margin-top: -250px;
+    border-radius: 5px;
+}
+button {
+    margin-left: 95%;
+}
+
+span{
+    margin-left: 40%;
+}
+
+#titulo1 {
+    font-size: 4.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+</style>
+
+
+    <body>
+    <div class= 'container' id= bloco1>
+        <div id= 'titulo1'> Que forma geométrica é essa? </div>
+        <div>
+            <canvas id='myCanvas' width='200px' height='200px'></canvas>
+           <div> 
+                <form name="formulario">
+                        <imput><textarea class="form-control" id="form" name="texto" placeholder="digite aqui a forma e clique em ok" rows="1" classname="ff1"></textarea></imput>
+                         <div><button type="Button" class="btn btn-primary btn-lg" name="confere" onClick="conferir()">ok</button> </div>
+            </form>
+        </div>
+        </div>
+    </div>
+  
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath(); 
+                    ctx.fillStyle= "blue";
+                    ctx.arc(100, 95, 65, 0, 30 * Math.PI);
+                    ctx.fill();
+        ctx.closepath();
+
+      
+       
+        function conferir(){
+        if (formulario.texto.value == "círculo")
+       {alert ("Parabéns!!! :)")
+        }
+        if (formulario.texto.value == "circulo")
+       {alert ("Parabéns!!! :)")
+        }
+         else 
+         {alert ("Errooouuu :(")
+         }
+       }
+      
+
+       
+
+       
+
+        
+       
+    </script>
+
+    </body>
+
+</html> 
